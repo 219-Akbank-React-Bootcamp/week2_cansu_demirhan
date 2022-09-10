@@ -2,21 +2,14 @@ document.addEventListener("DOMContentLoaded", () => {
   //template render
   window.template();
   var selectedRow = null;
-  let userId = 2;
-  let productId = 3;
+  let userId = 0;
+  let productId = 0;
   let total = 0;
   const state = {
     selectedCostumerId: null,
     basketData: {},
-    userData: [
-      { id: 0, name: "Cansu", balance: 300, createdAt: new Date() },
-      { id: 1, name: "Demirhan", balance: 100, createdAt: new Date() },
-    ],
-    productList: [
-      { id: 0, name: "Mouse", price: 5, quantity: 100 },
-      { id: 1, name: "Keyboard", price: 10, quantity: 50 },
-      { id: 2, name: "Computer", price: 20, quantity: 150 },
-    ],
+    userData: [],
+    productList: [],
   };
 
   // DOM
@@ -421,6 +414,4 @@ document.addEventListener("DOMContentLoaded", () => {
     productListUpdate();
     basketListUpdate();
   };
-
-  renderApp();
 });
