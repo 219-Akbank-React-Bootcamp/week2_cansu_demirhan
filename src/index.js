@@ -119,6 +119,9 @@ document.addEventListener("DOMContentLoaded", () => {
       (item) => item.id == userReceiver
     );
 
+    if (userSender === userReceiver) {
+      return alert("You can not choose same user");
+    }
     if (senderBalance.balance < amount) {
       return alert("Insufficient balance");
     }
